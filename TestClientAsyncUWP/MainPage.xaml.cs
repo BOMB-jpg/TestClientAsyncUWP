@@ -23,10 +23,10 @@ namespace TestClientAsyncUWP
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        int _localOperationCounter = 0;
-        int _webAPIOperationCounter = 0;
+        int _localOperationCounter = 0;   //用于跟踪本地操作
+        int _webAPIOperationCounter = 0; // Web API 调用的次数
         
-        public MainPage()
+        public MainPage()   
         {
             this.InitializeComponent();
         }
@@ -38,7 +38,7 @@ namespace TestClientAsyncUWP
             textBlock.Text = text;
             listViewItem.Content = textBlock;
             lvwOutput.Items.Add(listViewItem);
-        
+    
         }
 
         private void btnLocalOperation_Click(object sender, RoutedEventArgs e)
